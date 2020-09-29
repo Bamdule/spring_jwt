@@ -1,0 +1,21 @@
+
+spring :    
+    devtools :
+        livereload :
+            enalbed : true
+    thymeleaf:
+        cache : false       
+    datasource:
+        hikari :
+            maximum-pool-size : 4
+        url : "@db.url@"  
+        username : "@db.username@"
+        password : "@db.password@"
+        
+        
+mybatis :
+    type-aliases-package : com.bamdule.model
+    mapper-locations : mapper/xml/*.xml
+    
+log.dir : @logging.dir@
+log.level : @logging.level@
